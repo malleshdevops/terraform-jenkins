@@ -18,7 +18,10 @@ locals {
 
 resource "aws_vpc" "vpc" {
   cidr_block           = "192.168.1.0/28"
-  name = "jenkins-test"
+  
   enable_dns_hostnames = true
   enable_dns_support   = true
+ tags = {
+  Name = "jenkins-test"
+}
 }
