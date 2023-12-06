@@ -11,6 +11,7 @@ terraform {
 variable "region" {
   description = "The name of the aws Region"
   type        = string
+  default = "us-west-2"
 }
 locals {
   region = var.region
